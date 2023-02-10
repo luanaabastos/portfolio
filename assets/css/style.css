@@ -207,7 +207,7 @@ header .grid-layout nav .nav-list li a:hover {
   background-image: url("kisspng-c-compiler-computer-programming-computer-software-training-courses-5b3478f5599478.0298489515301654933669.png");
   background-repeat: no-repeat;
   background-position: right;
-  min-height: 95vh;
+  min-height: 80vh;
 }
 @media screen and (max-width: 992px) {
   #s-home .grid-layout #home {
