@@ -1,308 +1,889 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Meu nome é Luana, bacharel em matemática, desenvolvedora júnior." />
+
+  <meta name="description"
+    content="Portfólio de Luana do Amaral Bastos, Senior Software Test Engineer com experiência em Quality Assurance, automação Web, mobile, API e CI/CD." />
+
   <meta name="keywords"
-    content="sites, web, desenvolvimento, frontend, programadora, front-end, freelancer, freela, website, portfólio" />
+    content="Quality Assurance, QA Sênior, Senior Software Test Engineer, Playwright, Cypress, Selenium, Appium, API Testing, Test Automation, TypeScript, GitHub Actions" />
+
+  <meta name="author" content="Luana do Amaral Bastos" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ff3a5e" />
-  <meta name="copyright" content="Luana Bastos" />
-  <meta http-equiv="content-language" content="pt-br" />
-  <meta property="og:image" content="" />
-  <meta property="og:title" content="Portfólio Luana Bastos" />
-  <meta property="og:description" content="Portfólio Luana Bastos" />
+  <meta name="theme-color" content="#080b12" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Luana do Amaral Bastos | Senior Software Test Engineer" />
+  <meta property="og:description"
+    content="Quality Assurance, automação de testes Web, mobile e API, estratégia de qualidade e integração contínua." />
+  <meta property="og:url" content="https://luanaabastos.github.io/portfolio/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="shortcut icon" href="icons8-programação-96.png" type="image/x-icon" />
-  <link rel="icon" href="icons8-programação-96.png" />
-  <link rel="apple-touch-icon" href="My project-1.png" />
-  <link rel="canonical" href="https://luanabastos.com/" />
-  <script src="assets/js/svg-inject.min.js"></script>
-  <title>Portfólio Luana Bastos</title>
+
+  <title>Luana Bastos | Senior Software Test Engineer</title>
 </head>
 
 <body>
-  <header>
-    <div class="grid-layout">
-      <nav>
-        <img src="icons8-programação-96.png" alt="Logo Luana Bastos" width="25px" height="25px" />
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#s-home">Ínicio</a></li>
-          <li><a href="#s-about">Sobre mim</a></li>
-          <li><a href="#s-experience">Experiências</a></li>
-          <li>
-            <a href="#s-projects">Formações</a>
-          </li>
-          <!--<li>
-             <a href="#s-services">Serviços</a>
-          </li>-->
-          <li>
-            <a href="#s-skills">Habilidades</a>
-          </li>
+  <a class="skip-link" href="#main-content">
+    Ir para o conteúdo principal
+  </a>
+
+  <header class="site-header" id="top">
+    <div class="container header-content">
+      <a class="brand" href="#home" aria-label="Página inicial">
+        <span class="brand-mark">LB</span>
+
+        <span class="brand-text">
+          <strong>Luana Bastos</strong>
+          <small>Quality Engineering</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="main-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-navigation" class="main-navigation" aria-label="Principal">
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#impact">Diferenciais</a></li>
+          <li><a href="#expertise">Especialidades</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#case-study">Case principal</a></li>
+          <li><a href="#stack">Tecnologias</a></li>
+          <li><a href="#education">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="s-home">
-      <div class="grid-layout">
-        <div id="home">
-          <div id="home-img">
-            <div id="home-container-text">
-              <h1 class="delayMediumReveal">
-                Tentando colocar em prática
-                <span>o mundo da programação</span>
-                na minha rotina.
-              </h1>
-              <br><br><br><br><br><br>
-              <a href="redessociais.html" rel="noopener" target="_blank" class="delayExtraBigReveal">
-                Acompanha nas redes
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">
+            Quality Assurance • Test Automation • Quality Engineering
+          </p>
+
+          <h1>
+            Luana do Amaral Bastos
+            <span>Senior Software Test Engineer</span>
+          </h1>
+
+          <p class="hero-description">
+            Atuo na qualidade de software de ponta a ponta, combinando
+            estratégia de testes, automação e colaboração com Produto e
+            Desenvolvimento para prevenir falhas e elevar a confiabilidade
+            das entregas.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#case-study">
+              Ver case principal
+            </a>
+
+            <a class="button button-secondary" href="#experience">
+              Conhecer minha trajetória
+            </a>
+          </div>
+
+          <div class="hero-links" aria-label="Links profissionais">
+            <a href="https://www.linkedin.com/in/luanaamaralbastos" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+
+            <a href="https://github.com/luanaabastos" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+
+            <a href="mailto:lu.a.ba57@gmail.com">
+              E-mail
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-profile" aria-label="Resumo profissional">
+          <div class="profile-glow"></div>
+
+          <div class="profile-card">
+            <div class="profile-photo-wrapper">
+              <img src="assets/images/profile.png" alt="Foto profissional de Luana do Amaral Bastos"
+                class="profile-photo" />
+            </div>
+
+            <p class="availability">
+              <span aria-hidden="true"></span>
+              Aberta a oportunidades em QA
+            </p>
+
+            <h2>Qualidade orientada a riscos e resultados</h2>
+
+            <ul class="profile-highlights">
+              <li>Testes manuais e automatizados</li>
+              <li>Web, mobile e API</li>
+              <li>Estratégia, liderança técnica e melhoria contínua</li>
+              <li>CI/CD, acessibilidade e contratos</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics section-small" aria-label="Indicadores profissionais">
+      <div class="container metrics-grid">
+        <article class="metric-card">
+          <strong>5+</strong>
+          <span>anos em tecnologia</span>
+        </article>
+
+        <article class="metric-card">
+          <strong>3+</strong>
+          <span>anos em Quality Assurance</span>
+        </article>
+
+        <article class="metric-card">
+          <strong>Web • Mobile • API</strong>
+          <span>cobertura em múltiplas plataformas</span>
+        </article>
+
+        <article class="metric-card">
+          <strong>Manual + Automação</strong>
+          <span>visão completa do processo de qualidade</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container two-columns">
+        <div>
+          <p class="section-label">Sobre mim</p>
+
+          <h2 class="section-title">
+            Qualidade de software além da execução de testes
+          </h2>
+        </div>
+
+        <div class="about-content">
+          <p>
+            Sou profissional de Quality Assurance com experiência na garantia
+            da qualidade de software durante todo o ciclo de desenvolvimento,
+            desde a análise de requisitos até a validação final das entregas.
+          </p>
+
+          <p>
+            Atuo com planejamento e estratégia de testes, análise de riscos,
+            testes funcionais, regressivos e exploratórios, automação Web,
+            mobile e API, gestão de defeitos e melhoria contínua dos processos
+            de qualidade.
+          </p>
+
+          <p>
+            Minha experiência anterior em desenvolvimento de software fortalece
+            minha colaboração técnica com Produto e Engenharia, permitindo
+            analisar soluções de forma mais ampla e contribuir para a prevenção
+            de falhas desde as primeiras etapas do desenvolvimento.
+          </p>
+
+          <div class="about-tags" aria-label="Principais áreas de atuação">
+            <span>Test Strategy</span>
+            <span>Risk-based Testing</span>
+            <span>Test Automation</span>
+            <span>API Testing</span>
+            <span>Mobile Testing</span>
+            <span>Continuous Integration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="impact section" id="impact">
+      <div class="container">
+        <p class="section-label">Diferenciais profissionais</p>
+
+        <h2 class="section-title">Como gero impacto em qualidade</h2>
+
+        <p class="impact-intro">
+          Minha atuação combina visão de negócio, estratégia de testes,
+          liderança técnica e colaboração com diferentes áreas para antecipar
+          riscos e aumentar a confiabilidade das entregas.
+        </p>
+
+        <div class="impact-grid">
+          <article class="impact-card">
+            <span class="impact-number">01</span>
+            <h3>Estratégia baseada em riscos</h3>
+            <p>
+              Priorização dos testes considerando criticidade, impacto para o
+              negócio, probabilidade de falha e histórico do produto.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <span class="impact-number">02</span>
+            <h3>Qualidade desde o refinamento</h3>
+            <p>
+              Participação antecipada na análise de requisitos, regras de negócio
+              e critérios de aceitação para reduzir ambiguidades e retrabalho.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <span class="impact-number">03</span>
+            <h3>Liderança técnica</h3>
+            <p>
+              Organização das demandas de QA, revisão de automações, apoio técnico
+              e contribuição para a evolução dos profissionais da área.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <span class="impact-number">04</span>
+            <h3>Prevenção de defeitos</h3>
+            <p>
+              Atuação voltada à identificação de riscos antes da implementação,
+              reduzindo falhas tardias e aumentando a previsibilidade das entregas.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <span class="impact-number">05</span>
+            <h3>Qualidade contínua</h3>
+            <p>
+              Integração de automações ao pipeline, acompanhamento de evidências,
+              execução cross-browser e monitoramento da estabilidade da suíte.
+            </p>
+          </article>
+
+          <article class="impact-card">
+            <span class="impact-number">06</span>
+            <h3>Colaboração entre áreas</h3>
+            <p>
+              Comunicação de riscos e apoio à tomada de decisão em parceria com
+              Produto, Desenvolvimento e demais envolvidos no ciclo de entrega.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="expertise section" id="expertise">
+      <div class="container">
+        <p class="section-label">Especialidades</p>
+
+        <h2 class="section-title">
+          Atuação técnica e estratégica em Quality Engineering
+        </h2>
+
+        <div class="cards-grid expertise-grid">
+          <article class="content-card">
+            <span class="card-number">01</span>
+            <h3>Estratégia de qualidade</h3>
+            <p>
+              Planejamento de testes, análise de riscos, definição de critérios
+              de aceitação, testes exploratórios e acompanhamento da qualidade
+              durante todo o ciclo de desenvolvimento.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">02</span>
+            <h3>Automação Web e API</h3>
+            <p>
+              Criação e manutenção de automações com Playwright, Cypress,
+              Selenium, TypeScript e JavaScript, além de validações de APIs e
+              contratos.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">03</span>
+            <h3>Mobile Testing</h3>
+            <p>
+              Estratégia e execução de testes mobile com Appium, Katalon e
+              Maestro, considerando diferentes dispositivos, ambientes e
+              riscos de negócio.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <span class="card-number">04</span>
+            <h3>Qualidade contínua</h3>
+            <p>
+              Integração contínua, pipelines de testes, acessibilidade,
+              execução cross-browser, relatórios de qualidade e prevenção de
+              regressões.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience">
+      <div class="container">
+        <p class="section-label">Experiência</p>
+
+        <h2 class="section-title">
+          Evolução profissional em qualidade e engenharia de software
+        </h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-period">
+              <span>2024 — Atual</span>
+            </div>
+
+            <div class="timeline-content">
+              <p class="timeline-company">
+                Geopixel
+              </p>
+
+              <h3>Senior Software Test Engineer</h3>
+
+              <ul>
+                <ul>
+                  <li>
+                    Liderança da área de Quality Assurance, organizando prioridades,
+                    distribuindo demandas e acompanhando riscos e qualidade das entregas.
+                  </li>
+
+                  <li>
+                    Definição da estratégia de testes com base em requisitos, criticidade,
+                    impacto para o negócio e critérios de aceitação.
+                  </li>
+
+                  <li>
+                    Atuação antecipada em refinamentos e planejamento, identificando
+                    ambiguidades, dependências e riscos antes do desenvolvimento.
+                  </li>
+
+                  <li>
+                    Planejamento e acompanhamento de testes funcionais, regressivos,
+                    exploratórios, Web, mobile e API em diferentes produtos e times.
+                  </li>
+
+                  <li>
+                    Revisão técnica e code review das automações, promovendo padronização,
+                    manutenibilidade e evolução contínua da suíte de testes.
+                  </li>
+
+                  <li>
+                    Mentoria e apoio técnico a profissionais da área, contribuindo para
+                    autonomia, compartilhamento de conhecimento e evolução do time.
+                  </li>
+
+                  <li>
+                    Acompanhamento de indicadores, evidências, defeitos e relatórios para
+                    apoiar decisões de liberação, bloqueio e priorização das entregas.
+                  </li>
+
+                  <li>
+                    Atuação em times dinâmicos e multidisciplinares, colaborando com Produto,
+                    Desenvolvimento e demais áreas durante todo o ciclo de entrega.
+                  </li>
+
+                  <li>
+                    Experiência também como Scrum Master, facilitando cerimônias, removendo
+                    impedimentos e apoiando a organização e melhoria contínua do time.
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-period">
+              <span>2023 — 2024</span>
+            </div>
+
+            <div class="timeline-content">
+              <p class="timeline-company">
+                Geopixel
+              </p>
+
+              <h3>Software Test Engineer Pleno</h3>
+
+              <ul>
+                <li>
+                  Planejamento e execução de testes funcionais, regressivos,
+                  exploratórios e de homologação.
+                </li>
+                <li>
+                  Automação Web com Cypress e JavaScript.
+                </li>
+                <li>
+                  Criação de planos, cenários e casos de teste.
+                </li>
+                <li>
+                  Registro, análise e acompanhamento de defeitos pelo Jira.
+                </li>
+                <li>
+                  Colaboração com Produto e Desenvolvimento em cerimônias e
+                  refinamentos.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-period">
+              <span>2023</span>
+            </div>
+
+            <div class="timeline-content">
+              <p class="timeline-company">
+                Geopixel
+              </p>
+
+              <h3>Quality Assurance Analyst</h3>
+
+              <ul>
+                <li>
+                  Estruturação dos processos e práticas da área de qualidade.
+                </li>
+                <li>
+                  Análise de requisitos e regras de negócio.
+                </li>
+                <li>
+                  Criação e execução de testes funcionais e exploratórios.
+                </li>
+                <li>
+                  Documentação de evidências e cenários em Gherkin.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-period">
+              <span>2022 — 2023</span>
+            </div>
+
+            <div class="timeline-content">
+              <p class="timeline-company">
+                MOVA | Credit as a Service
+              </p>
+
+              <h3>Back-end Software Engineer | PHP e APIs</h3>
+
+              <ul>
+                <li>
+                  Desenvolvimento e manutenção de aplicações back-end com PHP.
+                </li>
+                <li>
+                  Implementação e evolução de APIs e microsserviços.
+                </li>
+                <li>
+                  Consultas e validações em banco de dados.
+                </li>
+                <li>
+                  Testes automatizados com PHPUnit, Docker, GitLab e Google
+                  Cloud Platform.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-period">
+              <span>2021 — 2022</span>
+            </div>
+
+            <div class="timeline-content">
+              <p class="timeline-company">
+                Global Financeiro
+              </p>
+
+              <h3>Estagiária de Quality Assurance</h3>
+
+              <ul>
+                <li>
+                  Execução de testes funcionais em plataforma financeira.
+                </li>
+                <li>
+                  Identificação, documentação e acompanhamento de defeitos.
+                </li>
+                <li>
+                  Criação de evidências e execução de testes de regressão.
+                </li>
+                <li>
+                  Utilização de Postman e GitLab no processo de qualidade.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-study section" id="case-study">
+      <div class="container">
+        <div class="case-header">
+          <div>
+            <p class="section-label">Case principal</p>
+
+            <h2 class="section-title">
+              Quality Engineering E-commerce
+            </h2>
+          </div>
+
+          <a class="button button-secondary" href="https://github.com/luanaabastos/quality-engineering-ecommerce"
+            target="_blank" rel="noopener noreferrer">
+            Ver repositório
+          </a>
+        </div>
+
+        <div class="case-intro">
+          <p>
+            Case completo de Quality Engineering para uma aplicação de
+            e-commerce, envolvendo estratégia de testes, automação Web e API,
+            acessibilidade, contratos, performance e integração contínua.
+          </p>
+        </div>
+
+        <div class="case-details-grid">
+          <article class="case-detail">
+            <span>01</span>
+            <h3>Contexto e desafio</h3>
+            <p>
+              Construir uma estratégia de qualidade que cobrisse fluxos críticos
+              de e-commerce e permanecesse organizada, sustentável e executável
+              em diferentes navegadores.
+            </p>
+          </article>
+
+          <article class="case-detail">
+            <span>02</span>
+            <h3>Decisões técnicas</h3>
+            <p>
+              Playwright, TypeScript, Page Object Model, fixtures, separação
+              entre testes Web e API e contratos de dados com Zod.
+            </p>
+          </article>
+
+          <article class="case-detail">
+            <span>03</span>
+            <h3>Cobertura</h3>
+            <p>
+              Autenticação, cadastro, carrinho, checkout, logout, operações de
+              API, acessibilidade, performance e execução cross-browser.
+            </p>
+          </article>
+
+          <article class="case-detail">
+            <span>04</span>
+            <h3>CI/CD</h3>
+            <p>
+              Pipeline no GitHub Actions com jobs independentes para TypeScript
+              type check, testes de API e testes Web.
+            </p>
+          </article>
+        </div>
+
+        <div class="case-results">
+          <article>
+            <strong>16</strong>
+            <span>cenários de API</span>
+          </article>
+
+          <article>
+            <strong>11</strong>
+            <span>cenários Web</span>
+          </article>
+
+          <article>
+            <strong>45</strong>
+            <span>execuções</span>
+          </article>
+
+          <article>
+            <strong>44</strong>
+            <span>aprovadas</span>
+          </article>
+
+          <article>
+            <strong>1</strong>
+            <span>ignorada de forma documentada</span>
+          </article>
+
+          <article>
+            <strong>0</strong>
+            <span>falhas</span>
+          </article>
+        </div>
+
+        <div class="evidence-grid">
+          <article class="evidence-card">
+            <div class="evidence-preview">
+              <img src="assets/images/evidence/release-v1.0.0.png" alt="Release v1.0.0 publicada no GitHub" />
+            </div>
+
+            <h3>Release v1.0.0</h3>
+            <p>
+              Primeira versão estável do projeto, com documentação,
+              evidências e pipeline publicados.
+            </p>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-preview">
+              <img src="assets/images/evidence/github-actions.png"
+                alt="Pipeline de testes aprovado no GitHub Actions" />
+            </div>
+
+            <h3>Pipeline CI/CD</h3>
+            <p>
+              Type check, testes de API e testes Web executados em jobs
+              independentes.
+            </p>
+          </article>
+
+          <article class="evidence-card">
+            <div class="evidence-preview">
+              <img src="assets/images/evidence/playwright-report.png"
+                alt="Relatório da suíte automatizada no Playwright" />
+            </div>
+
+            <h3>Relatório de execução</h3>
+            <p>
+              Evidência dos resultados da suíte automatizada e dos navegadores
+              utilizados.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack section" id="stack">
+      <div class="container">
+        <p class="section-label">Tecnologias</p>
+
+        <h2 class="section-title">
+          Ferramentas aplicadas conforme o contexto de qualidade
+        </h2>
+
+        <div class="stack-grid">
+          <article class="stack-card">
+            <h3>Automação</h3>
+            <div>
+              <span>Playwright</span>
+              <span>Cypress</span>
+              <span>Selenium</span>
+              <span>Appium</span>
+              <span>Katalon</span>
+              <span>Maestro</span>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <h3>Linguagens</h3>
+            <div>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>SQL</span>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <h3>API e dados</h3>
+            <div>
+              <span>Postman</span>
+              <span>REST APIs</span>
+              <span>Zod</span>
+              <span>MySQL</span>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <h3>CI/CD e infraestrutura</h3>
+            <div>
+              <span>GitHub Actions</span>
+              <span>Azure DevOps</span>
+              <span>Git</span>
+              <span>GitLab</span>
+              <span>Docker</span>
+            </div>
+          </article>
+
+          <article class="stack-card">
+            <h3>Gestão e processos</h3>
+            <div>
+              <span>Jira</span>
+              <span>Scrum</span>
+              <span>Kanban</span>
+              <span>Test Strategy</span>
+              <span>Defect Management</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="education section" id="education">
+      <div class="container">
+        <p class="section-label">Formação</p>
+
+        <h2 class="section-title">
+          Base acadêmica e desenvolvimento contínuo
+        </h2>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <span>Graduação</span>
+            <h3>Bacharelado em Matemática</h3>
+            <p>Universidade Federal de Itajubá — UNIFEI</p>
+            <small>2018 — 2023</small>
+          </article>
+
+          <article class="education-card">
+            <span>Graduação em andamento</span>
+            <h3>Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+            <p>UniCesumar</p>
+            <small>2026 — 2029</small>
+          </article>
+
+          <article class="education-card">
+            <span>Desenvolvimento contínuo</span>
+            <h3>Quality Assurance, automação e engenharia de software</h3>
+            <p>
+              Cursos e certificações em Cypress, Selenium, APIs, Postman,
+              Playwright, desenvolvimento e metodologias ágeis.
+            </p>
+
+            <a href="https://www.linkedin.com/in/luanaamaralbastos" target="_blank" rel="noopener noreferrer">
+              Ver certificações no LinkedIn
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-content">
+            <span class="section-label">Contato</span>
+
+            <h2>Vamos conversar sobre qualidade de software?</h2>
+
+            <p>
+              Estou aberta a oportunidades em Quality Assurance, Software Testing,
+              automação e Quality Engineering.
+            </p>
+
+            <div class="contact-links">
+              <a href="https://www.linkedin.com/in/luanaamaralbastos" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+
+              <a href="https://github.com/luanaabastos" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+
+              <a href="mailto:lu.a.ba57@gmail.com">
+                E-mail
               </a>
             </div>
           </div>
+
+          <form class="contact-form" action="https://formspree.io/f/mwvgjgvo" method="POST">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@empresa.com" autocomplete="email"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Empresa</label>
+              <input type="text" id="company" name="company" placeholder="Nome da empresa — opcional"
+                autocomplete="organization" />
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="subject">Assunto</label>
+              <input type="text" id="subject" name="subject" placeholder="Motivo do contato" required />
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="6"
+                placeholder="Conte um pouco sobre a oportunidade ou projeto." required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Novo contato pelo portfólio da Luana" />
+
+            <button class="contact-submit" type="submit">
+              Enviar mensagem
+            </button>
+          </form>
         </div>
       </div>
     </section>
-
-    <section id="s-about">
-      <div class="grid-layout">
-        <div>
-          <div id="creator-photo" class="delayMediumReveal">
-          </div>
-          <div>
-            <h2 class="delaySmallReveal">Luana Bastos</h2>
-            <h4 class="delayMediumReveal">Bachelor of Mathematics | PHP Developer | Junior Developer | QA Tester Júnior
-            </h4>
-            <p class="delayLargeReveal">
-              Bacharel em Matemática, experiência na graduação como bolsista de calculo quântico,
-              bolsista para elaboração de material aberto e online MOOC, diretora do administrativo financeiro na
-              empresa Worqui Jr. Assessora do juridico administrativo na Atlética Unifei.
-              Experiência Profissional: Suporte Técnico e Tester na empresa Global financeiro.
-              Estagiária em back-end na empresa MOVA | Credit as a Service, onde atualmente trabalho como desenvolvedora
-              junior.
-              Conhecimentos consolidados em PHP, HTML, CSS, JavaScript, SQL e frameworks como React.js e Bootstrap.
-              Atualmente me especializando como FullStack pela DNC, com previsão de término para dezembro de 2023.
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="s-services">
-      <div class="grid-layout">
-        <h2 class="delaySmallReveal">Experiência Profissional <span></span></h2>
-        <div id="services">
-          <article class="intervalCardReveal teslabank">
-            <p><b>MOVA | Credit as a Service</b><br><br>
-              Desenvolvedora na linguagem de PHP, de forma limpa, conforme solicitado por produtos. Consulta em banco de
-              dados, arquitetura de microserviços, Docker, Gitlab e
-              Google Cloud Plataform.
-              Metodologia de desenvolvimento ágil SCRUM.
-              Na área de front end, realizando alguns testes e trabalhando com as linguagens HTML, CSS e
-              JavaScript. Realização de testes unitários e funcionais.
-              <b></b>
-            </p>
-            <!-- <a href="https://www.linkedin.com/in/luana-do-amaral-bastos-a770a41b7/" rel="noopener" target="_blank"
-              id="teslabank">Saber Mais
-            </a> -->
-          </article>
-          <article class="intervalCardReveal teslabank">
-            <p><b>Núcleo de Educação Online e Aberta</b><br>
-              Conhecimento aprimorado sobre a plataforma.
-              Desenvolver o conteúdo que será praticado pelos alunos da universidade.
-              Fazer a validação da plataforma, realizar todos os testes para resolver provaveis bugs. Acompanhamento diário e suporte aos alunos e professores que utilizam a plataforma.
-            </p>
-            <!-- <a href="https://www.linkedin.com/in/luana-do-amaral-bastos-a770a41b7/" rel="noopener" target="_blank"
-              id="teslabank">Saber Mais
-            </a> -->
-          </article>
-          <article class="intervalCardReveal teslabank">
-            <p><b>Global Financeiro - Plataforma de Gestão e Auditoria Financeira</b><br>
-              Responsável por realizar todos os testes de funcionalidade na plataforma, caso algum erro fosse encontrado
-              era reportado para o time de desenvolvimento através do Gitlab.
-              Responsável também por dá suporte técnico ao cliente caso o mesmo estivesse com algum problema referente a
-              plataforma.
-              Todos os testes eram realizados sempre quando alguma modificação era feita.
-
-            </p>
-            <!-- <a href="https://www.linkedin.com/in/luana-do-amaral-bastos-a770a41b7/" rel="noopener" target="_blank"
-              id="teslabank">Saber Mais
-            </a> -->
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="s-projects">
-      <div class="grid-layout">
-        <h2 class="delaySmallReveal">Formações em desenvolvimento <span></span></h2>
-        <div id="projects">
-          <article class="intervalCardReveal teslabank">
-            <h3>Formação PHP</h3>
-            <p>
-              O PHP é uma das linguagens de programação mais utilizadas no desenvolvimento web. Por ser multi
-              plataforma, open source, gratuita e bastante completa. Quem trabalha com PHP desenvolve sistemas, monta,
-              testa e depura programas que utilizam banco de dados. Também realiza correções em sistemas visando a boa
-              experiência dos usuários.</p>
-            <a href="https://cursos.alura.com.br/degree/certificate/5c208b8c-185d-4a6d-8ac4-f7da0c7edba9" rel="noopener"
-              target="_blank" id="teslabank">Visualizar credencial
-            </a>
-          </article>
-
-          <article class="intervalCardReveal naped">
-            <h3>Formação Arquitetura PHP</h3>
-            <p>
-              Nesta formação é ensinado alguns padrões de projeto e boas práticas de código, como o MVC, o SOLID
-              e DDD. Uma área de arquitetura, consegue focar em
-              estudar as melhores soluções, criar e definir regras que facilitem o
-              desenvolvimento, documentar e organizar os componentes, manter o que é
-              corporativo sempre atualizado e integrado.
-            </p>
-
-            <a href="https://cursos.alura.com.br/degree/certificate/e90095ff-2901-40ab-ae26-e8633015f02e" rel="noopener"
-              target="_blank" id="naped">Visualizar credencial
-            </a>
-          </article>
-          <article class="intervalCardReveal naped">
-            <h3>Formação OWASP</h3>
-            <p>
-              OWASP Top 10: atualizar um relatório com o top 10 dos maiores riscos de
-              segurança em uma aplicação web. Assim é conhecido cada item, criando padrões de
-              verificações, e trabalhando com Clojure, resolvendo os itens desse
-              relatório. The Open Web Application Security Project ou OWASP é uma organização que trabalha com objetivo
-              de aprimorar a segurança de software.
-            </p>
-
-            <a href="https://cursos.alura.com.br/degree/certificate/cf9b859d-0f5c-4116-85aa-73d9cd14bbb9" rel="noopener"
-              target="_blank" id="naped">Visualizar credencial
-            </a>
-          </article>
-          <article class="intervalCardReveal naped">
-            <h3>Formação SQL com MySQL Server da Oracle: banco de dados</h3>
-            <p>
-              A linguagem com o banco de dados de código aberto mais popular, o Oracle MySQL.
-              O banco de dados MySQL da Oracle é utilizado em milhares de aplicações web, entre elas, o Facebook,
-              Twitter. Ensinando SQL, utilizando o banco mais popular e sabendo acessar os seus dados com facilidade,
-              confiabilidade e alto desempenho.
-            </p>
-
-            <a href="https://cursos.alura.com.br/degree/certificate/8053af48-1e62-4fe8-9297-7a094c097aef" rel="noopener"
-              target="_blank" id="naped">Visualizar credencial
-            </a>
-          </article>
-
-          <article class="intervalCardReveal efront">
-            <h3>Especialista em programação por LinkedIn Learning</h3>
-            <p>
-              Descobrindo o básico do mundo da programação, aprendendo os conceitos necessários para aprender qualquer
-              linguagem de programação. Receber os conhecimentos necessários para criar um código eficaz e seguro.
-              Design orientado a objetos, algoritmos, banco de dados, teste de software, garantia de
-              qualidade, git e github.
-            </p>
-            <a href="https://www.linkedin.com/learning/certificates/3dbfdea87b7f21bb3fb4ecc96f14288f55b37229ff8910bb8cde48881aead49a"
-              rel="noopener" target="_blank" id="efront">Visualizar credencial
-            </a>
-          </article>
-          <article class="intervalCardReveal efront">
-            <h3>Carreira QA: processos e automação de testes com cypress</h3>
-            <p>
-              Planejar os testes e elaborar o plano de testes visando reutilização. Elabora estimativas para projetos de testes. Elaborar os cenários e casos de testes, especificar a massa de dados para testes, elabora e implementa os procedimentos (scripts) e roteiros de teste. Avaliar os riscos e impactos nos testes, configurar o ambiente para os testes.
-            </p>
-            <a href="https://cursos.alura.com.br/user/lu-a-ba57/degree-carreira-tester-qa-281969/certificate"
-              rel="noopener" target="_blank" id="efront">Visualizar credencial
-            </a>
-          </article>
-        </div>
-        <a href="https://www.linkedin.com/in/luana-do-amaral-bastos-a770a41b7/" rel="noopener" target="_blank"
-          class="delayExtraBigReveal">Licenças e certificados com credencial</a>
-      </div>
-    </section>
-
-    <section id="s-skills">
-      <div class="grid-layout">
-        <div id="skills">
-          <article id="skills-text">
-            <h2 class="delaySmallReveal">Habilidades <span></span></h2>
-            <p class="delayMediumReveal changeDescription">
-              Ferramentas, linguagens de programação e banco de dados.
-            </p>
-          </article>
-
-          <div id="skills-cards">
-            <article class="styled intervalCardReveal">
-              <img src="php-file-icon.svg" width="60px" height="60px" alt="ícone do PHP" />
-            </article>
-            <article class="css intervalCardReveal">
-              <img src="html-file-icon.svg" width="60px" height="60px" alt="ícone do html" />
-            </article>
-            <article class="js intervalCardReveal">
-              <img src="css-file-icon.svg" width="60px" height="60px" alt="ícone do css" />
-            </article>
-            <article class="sass intervalCardReveal">
-              <img src="js-file-icon.svg" width="60px" height="60px" alt="ícone do JavaScript" />
-            </article>
-            <article class="react intervalCardReveal">
-              <img src="PngItem_241404.png" width="60px" height="60px" alt="ícone do react" />
-            </article>
-            <article class="next intervalCardReveal">
-              <img src="Next.js_Logotype_Light_Background.svg" width="60px" height="60px" alt="ícone do next" />
-            </article>
-            <article class="html intervalCardReveal">
-              <figure><img src="github-icon-1-logo-svgrepo-com.svg" width="60px" height="60px" alt="ícone do github">
-                <br>
-                <figcaption>GitHub</figcaption>
-              </figure>
-            </article>
-            <article class="tailwind intervalCardReveal">
-              <img src="typescript-svgrepo-com.svg" width="60px" height="60px" alt="ícone do typescript" />
-            </article>
-
-            <article class="radix intervalCardReveal">
-              <img src="sql-file-format-symbol-svgrepo-com.svg" width="60px" height="60px" alt="ícone do SQL" />
-            </article>
-
-            <article class="typescript intervalCardReveal">
-              <img src="gitlab.svg" width="60px" height="60px" alt="ícone do gitlab" />
-            </article>
-
-            <article class="storybook intervalCardReveal">
-              <img src="Ubuntu-logo-2022.svg.png" width="60px" height="60px" alt="ícone do ubuntu" />
-            </article>
-
-            <article class="cypress intervalCardReveal">
-              <img src="getbootstrap-ar21.svg" width="60px" height="60px" alt="ícone do Bootstrap" />
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="grid-layout">
-        <p>
-          Copyright © 2023
-          <a href="https://luanaabastos.github.io/portfolio/" rel="noopener" target="_blank">
-            luanabastos.com
-          </a>
-          Todos os direitos reservados.
-        </p>
-      </div>
-    </footer>
   </main>
 
-  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-  <script type="module" src="assets/js/main.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="current-year"></span> Luana do Amaral Bastos.
+      </p>
+
+      <a href="#top">
+        Voltar ao topo
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector(".main-navigation");
+    const navigationLinks = document.querySelectorAll(
+      ".main-navigation a"
+    );
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navigation.classList.toggle("is-open");
+    });
+
+    navigationLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.classList.remove("is-open");
+      });
+    });
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 
 </html>
