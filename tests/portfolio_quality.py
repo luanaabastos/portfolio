@@ -46,6 +46,9 @@ class PortfolioParser(HTMLParser):
         self._json_chunks: list[str] | None = None
         self._in_title = False
         self.title_chunks: list[str] = []
+        self.anchors: list[tuple[dict[str, str], str]] = []
+        self._anchor_attrs: dict[str, str] | None = None
+        self._anchor_chunks: list[str] | None = None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = {name: value or "" for name, value in attrs}
@@ -59,6 +62,9 @@ class PortfolioParser(HTMLParser):
 
         if tag == "title":
             self._in_title = True
+        if tag == "a":
+            self._anchor_attrs = attributes
+            self._anchor_chunks = []
         if tag == "script" and attributes.get("type") == "application/ld+json":
             self._json_chunks = []
         if tag not in VOID_ELEMENTS:
@@ -72,6 +78,10 @@ class PortfolioParser(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
             self._in_title = False
+        if tag == "a" and self._anchor_attrs is not None and self._anchor_chunks is not None:
+            self.anchors.append((self._anchor_attrs, "".join(self._anchor_chunks)))
+            self._anchor_attrs = None
+            self._anchor_chunks = None
         if tag == "script" and self._json_chunks is not None:
             self.json_ld.append("".join(self._json_chunks).strip())
             self._json_chunks = None
@@ -93,6 +103,8 @@ class PortfolioParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title_chunks.append(data)
+        if self._anchor_chunks is not None:
+            self._anchor_chunks.append(data)
         if self._json_chunks is not None:
             self._json_chunks.append(data)
 
@@ -252,6 +264,18 @@ def main() -> int:
             rel = set(attrs.get("rel", "").split())
             if not {"noopener", "noreferrer"}.issubset(rel):
                 fail(errors, f"link externo sem noopener noreferrer: {href}")
+
+    back_to_top_links = [
+        attrs
+        for attrs, text in parser.anchors
+        if " ".join(text.split()) == "Voltar ao topo"
+    ]
+    if len(back_to_top_links) != 1:
+        fail(errors, "deve existir exatamente um link 'Voltar ao topo'")
+    elif back_to_top_links[0].get("href") != "#top":
+        fail(errors, "link 'Voltar ao topo' deve apontar para #top")
+    elif parser.ids.get("top") != "header":
+        fail(errors, "destino #top deve existir no cabeçalho inicial da página")
 
     referenced_local_files: set[Path] = set()
     for tag, attrs in elements:
