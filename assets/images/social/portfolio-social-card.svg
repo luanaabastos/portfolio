@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Luana do Amaral Bastos — Senior Software Test Engineer</title>
+  <desc id="description">Card social sobre Quality Engineering, Test Strategy e Automation.</desc>
+
+  <defs>
+    <linearGradient id="overlay" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#080b12" stop-opacity="0.98" />
+      <stop offset="0.52" stop-color="#080b12" stop-opacity="0.92" />
+      <stop offset="0.72" stop-color="#080b12" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#080b12" stop-opacity="0.08" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b7cf6" />
+      <stop offset="1" stop-color="#42d8de" />
+    </linearGradient>
+  </defs>
+
+  <image href="quality-engineering-background.png" xlink:href="quality-engineering-background.png"
+    width="1200" height="630" preserveAspectRatio="xMidYMid slice" />
+  <rect width="1200" height="630" fill="url(#overlay)" />
+
+  <g font-family="Manrope, 'Segoe UI', Arial, sans-serif">
+    <g transform="translate(76 72)">
+      <rect width="58" height="58" rx="17" fill="#111827" stroke="#8b7cf6" stroke-width="2" />
+      <text x="29" y="37" fill="#f8fafc" font-size="22" font-weight="800" text-anchor="middle">LB</text>
+    </g>
+
+    <text x="76" y="190" fill="#cbd5e1" font-size="27" font-weight="600" letter-spacing="0.2">
+      Luana do Amaral Bastos
+    </text>
+
+    <text x="76" y="278" fill="#f8fafc" font-size="59" font-weight="800" letter-spacing="-1.4">
+      <tspan x="76" dy="0">Senior Software</tspan>
+      <tspan x="76" dy="67">Test Engineer</tspan>
+    </text>
+
+    <rect x="76" y="398" width="104" height="5" rx="2.5" fill="url(#accent)" />
+
+    <text x="76" y="477" fill="#dbe5f0" font-family="Inter, 'Segoe UI', Arial, sans-serif"
+      font-size="22" font-weight="600" letter-spacing="0.1">
+      Quality Engineering • Test Strategy • Automation
+    </text>
+
+    <text x="76" y="554" fill="#8ea0b6" font-family="Inter, 'Segoe UI', Arial, sans-serif"
+      font-size="17" font-weight="500" letter-spacing="0.8">
+      PORTFÓLIO PROFISSIONAL
+    </text>
+  </g>
+</svg>
