@@ -270,12 +270,19 @@ def main() -> int:
         for attrs, text in parser.anchors
         if " ".join(text.split()) == "Voltar ao topo"
     ]
+    top_targets = [
+        tag
+        for tag, attrs in elements
+        if attrs.get("id") == "top"
+    ]
     if len(back_to_top_links) != 1:
         fail(errors, "deve existir exatamente um link 'Voltar ao topo'")
     elif back_to_top_links[0].get("href") != "#top":
         fail(errors, "link 'Voltar ao topo' deve apontar para #top")
-    elif parser.ids.get("top") != "header":
-        fail(errors, "destino #top deve existir no cabeçalho inicial da página")
+    if len(top_targets) != 1:
+        fail(errors, "deve existir exatamente um destino id='top'")
+    elif top_targets[0] != "body":
+        fail(errors, "destino #top deve pertencer ao <body>, não ao header sticky")
 
     referenced_local_files: set[Path] = set()
     for tag, attrs in elements:
