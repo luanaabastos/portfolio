@@ -14,7 +14,12 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+README = ROOT / "README.md"
 PRODUCTION_URL = "https://luanaabastos.github.io/portfolio/"
+CURRENT_ROLE = "Senior QA Automation Engineer"
+HISTORICAL_ROLE = "Senior Software Test Engineer"
+TESTOPS_CASE = "TestOps Hub"
+LEGACY_TESTOPS_NAME = "QualityOps Hub"
 VOID_ELEMENTS = {
     "area",
     "base",
@@ -135,6 +140,7 @@ def png_dimensions(path: Path) -> tuple[int, int] | None:
 def main() -> int:
     errors: list[str] = []
     html = INDEX.read_text(encoding="utf-8")
+    readme = README.read_text(encoding="utf-8")
     parser = PortfolioParser()
     parser.feed(html)
     parser.close()
@@ -161,6 +167,8 @@ def main() -> int:
     title = " ".join("".join(parser.title_chunks).split())
     if not 20 <= len(title) <= 60:
         fail(errors, f"title deve ter entre 20 e 60 caracteres; atual: {len(title)}")
+    if CURRENT_ROLE not in title:
+        fail(errors, f"title deve conter o cargo atual: {CURRENT_ROLE}")
 
     meta_by_name = {
         attrs.get("name", "").lower(): attrs.get("content", "").strip()
@@ -176,6 +184,8 @@ def main() -> int:
     description = meta_by_name.get("description", "")
     if not 70 <= len(description) <= 160:
         fail(errors, f"meta description deve ter entre 70 e 160 caracteres; atual: {len(description)}")
+    if CURRENT_ROLE not in description:
+        fail(errors, f"meta description deve conter o cargo atual: {CURRENT_ROLE}")
     if meta_by_name.get("robots") != "index, follow":
         fail(errors, "meta robots deve ser 'index, follow'")
     if "keywords" in meta_by_name:
@@ -207,6 +217,11 @@ def main() -> int:
     if missing_twitter:
         fail(errors, f"Twitter Card incompleto: {', '.join(missing_twitter)}")
 
+    if CURRENT_ROLE not in meta_by_property.get("og:title", ""):
+        fail(errors, "og:title deve conter o cargo atual")
+    if CURRENT_ROLE not in meta_by_name.get("twitter:title", ""):
+        fail(errors, "twitter:title deve conter o cargo atual")
+
     links = by_tag.get("link", [])
     canonical = next(
         (attrs.get("href") for attrs in links if "canonical" in attrs.get("rel", "").split()),
@@ -234,6 +249,70 @@ def main() -> int:
                     fail(errors, f"JSON-LD sem {key}")
             if any(key in person for key in ("worksFor", "alumniOf", "award")):
                 fail(errors, "JSON-LD contém vínculo ou credencial fora do escopo confirmado")
+            if person.get("jobTitle") != CURRENT_ROLE:
+                fail(errors, f"JSON-LD jobTitle deve ser {CURRENT_ROLE}")
+
+    if not re.search(rf"<h1\b[^>]*>.*?{re.escape(CURRENT_ROLE)}.*?</h1>", html, re.DOTALL):
+        fail(errors, "Hero deve apresentar o cargo atual no <h1>")
+
+    timeline_items = re.findall(
+        r'<article class="timeline-item">(.*?)</article>',
+        html,
+        re.DOTALL,
+    )
+    current_role_items = [item for item in timeline_items if f"<h3>{CURRENT_ROLE}</h3>" in item]
+    historical_role_items = [item for item in timeline_items if f"<h3>{HISTORICAL_ROLE}</h3>" in item]
+    if len(current_role_items) != 1:
+        fail(errors, "timeline deve conter exatamente uma experiência no cargo atual")
+    elif "set/2026 — atual" not in current_role_items[0]:
+        fail(errors, "experiência atual deve iniciar em set/2026")
+    if len(historical_role_items) != 1:
+        fail(errors, "timeline deve preservar exatamente uma experiência no cargo histórico")
+    elif "mar/2024 — set/2026" not in historical_role_items[0]:
+        fail(errors, "experiência histórica deve terminar em set/2026")
+    if current_role_items and historical_role_items:
+        if timeline_items.index(current_role_items[0]) >= timeline_items.index(historical_role_items[0]):
+            fail(errors, "cargo atual deve aparecer antes do cargo histórico na timeline")
+
+    if LEGACY_TESTOPS_NAME in html or LEGACY_TESTOPS_NAME in readme:
+        fail(errors, f"nome público legado não deve aparecer: {LEGACY_TESTOPS_NAME}")
+
+    additional_case_cards = re.findall(
+        r'<article class="upcoming-case-card"[^>]*>(.*?)</article>',
+        html,
+        re.DOTALL,
+    )
+    testops_cards = [card for card in additional_case_cards if TESTOPS_CASE in card]
+    ctfl_cards = [card for card in additional_case_cards if "CTFL Learning Platform" in card]
+    if len(testops_cards) != 1:
+        fail(errors, "deve existir exatamente um card do TestOps Hub")
+    else:
+        testops_card = testops_cards[0]
+        if "case-status-published" not in testops_card or "Publicado • demonstrável" not in testops_card:
+            fail(errors, "TestOps Hub deve estar classificado como publicado e demonstrável")
+        if "case-status-progress" in testops_card or "Em desenvolvimento" in testops_card:
+            fail(errors, "TestOps Hub não deve estar classificado como em desenvolvimento")
+        if "Engineering Case autoral" not in testops_card:
+            fail(errors, "TestOps Hub deve estar identificado como Engineering Case autoral")
+        for url in (
+            "https://qualityops-hub.onrender.com",
+            "https://github.com/luanaabastos/testops-hub",
+        ):
+            if f'href="{url}"' not in testops_card:
+                fail(errors, f"card do TestOps Hub deve conter o link comprovado: {url}")
+
+    if len(ctfl_cards) != 1:
+        fail(errors, "deve existir exatamente um card da CTFL Learning Platform")
+    elif "case-status-progress" not in ctfl_cards[0] or "Em desenvolvimento" not in ctfl_cards[0]:
+        fail(errors, "CTFL Learning Platform deve permanecer em desenvolvimento")
+
+    development_cards = [
+        card
+        for card in additional_case_cards
+        if "case-status-progress" in card or "Em desenvolvimento" in card
+    ]
+    if len(development_cards) != 1 or "CTFL Learning Platform" not in development_cards[0]:
+        fail(errors, "CTFL Learning Platform deve ser o único Engineering Case em desenvolvimento")
 
     labels = {attrs.get("for") for attrs in by_tag.get("label", []) if attrs.get("for")}
     for tag in ("input", "textarea", "select"):
