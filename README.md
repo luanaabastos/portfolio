@@ -1,9 +1,9 @@
 # Portfólio de Quality Engineering
 
 Portfólio profissional de Luana do Amaral Bastos, direcionado a posições de
-Senior Software Test Engineer, Senior QA Engineer e Quality Engineer. O projeto
-prioriza evidências verificáveis, contexto de uso das tecnologias e limites
-explícitos para projetos ainda em desenvolvimento.
+Senior QA Automation Engineer, Senior Software Test Engineer, Senior QA Engineer
+e Quality Engineer. O projeto prioriza evidências verificáveis, contexto de uso
+das tecnologias e limites explícitos para projetos ainda em desenvolvimento.
 
 Produção: <https://luanaabastos.github.io/portfolio/>
 
